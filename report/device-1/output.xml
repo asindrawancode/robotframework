@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on darwin)" generated="2024-10-11T16:43:28.693146" rpa="false" schemaversion="5">
+<suite id="s1" name="Guest &amp; Landing">
+<suite id="s1-s1" name="Guest" source="/Users/agussriindrawansigit/nbs/robotframework/Guest.robot">
+<test id="s1-s1-t1" name="DG1-4: User can access home as guest" line="18">
+<kw name="Set Up Application" owner="Keywords" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>udid=${UDID}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>automationName=UIAutomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-10-11T16:43:28.791330" elapsed="5.529703"/>
+</kw>
+<status status="PASS" start="2024-10-11T16:43:28.791040" elapsed="5.530418"/>
+</kw>
+<kw name="Allow Notification" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:38.131190" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
+xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
+xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
+xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
+xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
+xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]</msg>
+<arg>${ALLOW_NOTIFICATION}</arg>
+<arg>timeout=${WAITING}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-11T16:43:34.322501" elapsed="3.808960"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:38.134938" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]'.</msg>
+<msg time="2024-10-11T16:43:38.318619" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]</msg>
+<arg>${ALLOW_NOTIFICATION}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-10-11T16:43:38.132081" elapsed="0.187053"/>
+</kw>
+<status status="PASS" start="2024-10-11T16:43:34.322018" elapsed="3.997571"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:38.934045" level="INFO">xpath criteria: //android.widget.TextView[ends-with(@resource-id, ":id/text_intro_next_step")]</msg>
+<arg>${LANDING_BUTTON_SKIP}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-11T16:43:38.320670" elapsed="0.613617"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:38.937519" level="INFO">Clicking element '//android.widget.TextView[ends-with(@resource-id, ":id/text_intro_next_step")]'.</msg>
+<msg time="2024-10-11T16:43:39.117918" level="INFO">xpath criteria: //android.widget.TextView[ends-with(@resource-id, ":id/text_intro_next_step")]</msg>
+<arg>${LANDING_BUTTON_SKIP}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-10-11T16:43:38.934928" elapsed="0.183477"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:42.196535" level="INFO">xpath criteria: //android.widget.FrameLayout[ends-with(@resource-id, ":id/cardView")]</msg>
+<arg>${HOME_POPUP_BANNER}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-11T16:43:39.119370" elapsed="3.077464"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:42.200088" level="INFO">Clicking element '//android.widget.ImageButton[ends-with(@resource-id, ":id/btnPopUpClose")]'.</msg>
+<msg time="2024-10-11T16:43:44.190921" level="INFO">xpath criteria: //android.widget.ImageButton[ends-with(@resource-id, ":id/btnPopUpClose")]</msg>
+<arg>${HOME_POPUP_BANNER_CLOSE}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-10-11T16:43:42.197612" elapsed="1.993622"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:45.200202" level="INFO">xpath criteria: //android.widget.TextView[ends-with(@resource-id, ":id/tvWelcomeUser")]</msg>
+<arg>${HOME_GREETING_LABEL}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-11T16:43:44.192208" elapsed="1.008331"/>
+</kw>
+<status status="PASS" start="2024-10-11T16:43:28.790768" elapsed="16.410552"/>
+</test>
+<test id="s1-s1-t2" name="DG1-5: User can see home's content as guest" line="27">
+<kw name="Element Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:45.204480" level="INFO">Verifying element '//android.widget.TextView[ends-with(@resource-id, ":id/tvWelcomeUser")]' contains text 'Hi, Gamers!'.</msg>
+<msg time="2024-10-11T16:43:45.588447" level="INFO">xpath criteria: //android.widget.TextView[ends-with(@resource-id, ":id/tvWelcomeUser")]</msg>
+<arg>${HOME_GREETING_LABEL}</arg>
+<arg>Hi, Gamers!</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-10-11T16:43:45.202822" elapsed="0.385670"/>
+</kw>
+<status status="PASS" start="2024-10-11T16:43:45.202124" elapsed="0.386485"/>
+</test>
+<test id="s1-s1-t3" name="DG1-6: User can see the main menu" line="30">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:46.203547" level="INFO">xpath criteria: //android.widget.FrameLayout[ends-with(@content-desc, "Home")]</msg>
+<arg>${HOME_MENU_MAIN}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-11T16:43:45.588893" elapsed="0.614914"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:47.214709" level="INFO">xpath criteria: //android.widget.FrameLayout[ends-with(@content-desc, "Games")]</msg>
+<arg>${HOME_MENU_GAMES}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-11T16:43:46.204535" elapsed="1.010302"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:48.216420" level="INFO">xpath criteria: //android.widget.FrameLayout[ends-with(@content-desc, "Profile")]</msg>
+<arg>${HOME_MENU_PROFILE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-11T16:43:47.215200" elapsed="1.001499"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:48.670608" level="INFO">xpath criteria: //android.widget.FrameLayout[ends-with(@content-desc, "Chat")]</msg>
+<arg>${HOME_MENU_CHAT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-11T16:43:48.217781" elapsed="0.453108"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:50.223506" level="INFO">xpath criteria: //android.widget.FrameLayout[ends-with(@content-desc, "Top Up")]</msg>
+<arg>${HOME_MENU_TOPUP}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-11T16:43:48.671545" elapsed="1.552326"/>
+</kw>
+<kw name="Tear Down Application" owner="Keywords" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-10-11T16:43:50.226140" elapsed="0.305771"/>
+</kw>
+<status status="PASS" start="2024-10-11T16:43:50.225298" elapsed="0.306699"/>
+</kw>
+<status status="PASS" start="2024-10-11T16:43:45.588720" elapsed="4.943352"/>
+</test>
+<status status="PASS" start="2024-10-11T16:43:28.710001" elapsed="21.822426"/>
+</suite>
+<suite id="s1-s2" name="Landing" source="/Users/agussriindrawansigit/nbs/robotframework/Landing.robot">
+<test id="s1-s2-t1" name="KHA1-2: User can see the onboarding screen" line="11">
+<kw name="Set Up Application" owner="Keywords" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>udid=${UDID}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>automationName=UIAutomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-10-11T16:43:50.539825" elapsed="3.992810"/>
+</kw>
+<status status="PASS" start="2024-10-11T16:43:50.539607" elapsed="3.993514"/>
+</kw>
+<kw name="Allow Notification" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:58.166825" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
+xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
+xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
+xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
+xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]
+xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]</msg>
+<arg>${ALLOW_NOTIFICATION}</arg>
+<arg>timeout=${WAITING}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-11T16:43:54.533943" elapsed="3.633127"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:58.169813" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]'.</msg>
+<msg time="2024-10-11T16:43:58.282513" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button"]</msg>
+<arg>${ALLOW_NOTIFICATION}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-10-11T16:43:58.167597" elapsed="0.115218"/>
+</kw>
+<status status="PASS" start="2024-10-11T16:43:54.533549" elapsed="3.749567"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:58.916705" level="INFO">xpath criteria: //android.widget.TextView[ends-with(@resource-id, ":id/text_intro_title")]</msg>
+<arg>${LANDING_ONBOARDING_TITLE}</arg>
+<arg>timeout=${WAITING}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-11T16:43:58.283868" elapsed="0.633450"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-10-11T16:43:59.028068" level="INFO">xpath criteria: //android.widget.TextView[ends-with(@resource-id, ":id/text_intro_next_step")]</msg>
+<arg>${LANDING_BUTTON_SKIP}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-10-11T16:43:58.918210" elapsed="0.110142"/>
+</kw>
+<kw name="Tear Down Application" owner="Keywords" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-10-11T16:43:59.030394" elapsed="0.370397"/>
+</kw>
+<status status="PASS" start="2024-10-11T16:43:59.029566" elapsed="0.371584"/>
+</kw>
+<status status="PASS" start="2024-10-11T16:43:50.539235" elapsed="8.862174"/>
+</test>
+<status status="PASS" start="2024-10-11T16:43:50.532720" elapsed="8.869466"/>
+</suite>
+<status status="PASS" start="2024-10-11T16:43:28.693922" elapsed="30.709098"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Guest &amp; Landing">Guest &amp; Landing</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Guest">Guest &amp; Landing.Guest</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Landing">Guest &amp; Landing.Landing</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
