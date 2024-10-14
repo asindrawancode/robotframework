@@ -51,9 +51,13 @@ pip install robotframework-appiumlibrary
    Ensure that `ANDROID_HOME` is set to your Android SDK's location and `PATH` includes the `platform-tools` directory.
 
 6. **Put the .apk file into app/android**
-   Put duniagames.apk into app/android
+   Put duniagames.apk into
 
-7. **Modify run-parallel.sh to perform parallel execution**:
+   ```bash
+   app/android
+   ```
+
+8. **Modify run-parallel.sh to perform parallel execution**:
     Modify run-parallel.sh file especially on this section to config :
 
     ```bash
@@ -63,7 +67,7 @@ pip install robotframework-appiumlibrary
     test_cases=("test-cases/Landing.robot" "test-cases/Guest.robot")  # Define test cases
     ```
 
-8. **Run Parallel Execution**:
+9. **Run Parallel Execution**:
     Execute this on terminal
    
    ```bash
