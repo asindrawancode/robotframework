@@ -56,7 +56,6 @@ pip install robotframework-appiumlibrary
 7. **Modify run-parallel.sh to perform parallel execution**:
     Modify run-parallel.sh file especially on this section to config :
 
-    # Configuration for emulators, ports, report directories, and test cases
     emulators=("emulator-5554" "emulator-5556")        # Add more emulator IDs here
     appium_ports=(4723 4725)                          # Corresponding Appium ports
     report_dirs=("reports/device-1" "reports/device-2")  # Define report directories
