@@ -65,4 +65,7 @@ pip install robotframework-appiumlibrary
 
 8. **Run Parallel Execution**:
     Execute this on terminal
-     ./run-parallel.sh 
+   
+   ```bash
+     ./run-parallel.sh
+   ```
