@@ -54,7 +54,7 @@ pip install robotframework-appiumlibrary
    Put duniagames.apk into
 
    ```bash
-   app/android
+   app/android/
    ```
 
 8. **Modify run-parallel.sh to perform parallel execution**:
