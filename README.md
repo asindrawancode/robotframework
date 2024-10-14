@@ -56,10 +56,12 @@ pip install robotframework-appiumlibrary
 7. **Modify run-parallel.sh to perform parallel execution**:
     Modify run-parallel.sh file especially on this section to config :
 
+    ```bash
     emulators=("emulator-5554" "emulator-5556")        # Add more emulator IDs here
     appium_ports=(4723 4725)                          # Corresponding Appium ports
     report_dirs=("reports/device-1" "reports/device-2")  # Define report directories
     test_cases=("test-cases/Landing.robot" "test-cases/Guest.robot")  # Define test cases
+    ```
 
 8. **Run Parallel Execution**:
     Execute this on terminal
